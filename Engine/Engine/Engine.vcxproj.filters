@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Texture Files">
+      <UniqueIdentifier>{02a757b4-b208-47c3-ac65-1578aba28fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Model Files">
+      <UniqueIdentifier>{1d973125-ec69-4019-a542-4727403c63c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="modelclass.h">
@@ -97,7 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="data\stone01.tga">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\Texture Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\simple_tree.txt">
+      <Filter>Resource Files\Model Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
