@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\Engine.vcxproj", "{293B9880-7677-4732-8D31-74252DDF8C69}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelConversion", "..\ModelConversion\ModelConversion\ModelConversion.vcxproj", "{B763C94D-E494-44EE-9565-911C6065F817}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelConversion", "ModelConversion\ModelConversion.vcxproj", "{B763C94D-E494-44EE-9565-911C6065F817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,14 +13,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{293B9880-7677-4732-8D31-74252DDF8C69}.Debug|x64.ActiveCfg = Debug|x64
-		{293B9880-7677-4732-8D31-74252DDF8C69}.Debug|x64.Build.0 = Debug|x64
-		{293B9880-7677-4732-8D31-74252DDF8C69}.Debug|x86.ActiveCfg = Debug|Win32
-		{293B9880-7677-4732-8D31-74252DDF8C69}.Debug|x86.Build.0 = Debug|Win32
-		{293B9880-7677-4732-8D31-74252DDF8C69}.Release|x64.ActiveCfg = Release|x64
-		{293B9880-7677-4732-8D31-74252DDF8C69}.Release|x64.Build.0 = Release|x64
-		{293B9880-7677-4732-8D31-74252DDF8C69}.Release|x86.ActiveCfg = Release|Win32
-		{293B9880-7677-4732-8D31-74252DDF8C69}.Release|x86.Build.0 = Release|Win32
 		{B763C94D-E494-44EE-9565-911C6065F817}.Debug|x64.ActiveCfg = Debug|x64
 		{B763C94D-E494-44EE-9565-911C6065F817}.Debug|x64.Build.0 = Debug|x64
 		{B763C94D-E494-44EE-9565-911C6065F817}.Debug|x86.ActiveCfg = Debug|Win32
@@ -36,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {102DAB09-2927-4DDF-A456-41F9C0BB93EE}
+		SolutionGuid = {BDC75B8F-5258-4033-A952-E622C3745835}
 	EndGlobalSection
 EndGlobal
