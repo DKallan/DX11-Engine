@@ -113,5 +113,13 @@
     <Text Include="cube.txt">
       <Filter>Resource Files\Model Files</Filter>
     </Text>
+    <Text Include="resources\sphere.txt">
+      <Filter>Resource Files\Model Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\sphere.iff">
+      <Filter>Resource Files\Texture Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
