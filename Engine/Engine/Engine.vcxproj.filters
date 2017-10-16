@@ -110,5 +110,8 @@
     <Text Include="resources\simple_tree.txt">
       <Filter>Resource Files\Model Files</Filter>
     </Text>
+    <Text Include="cube.txt">
+      <Filter>Resource Files\Model Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
