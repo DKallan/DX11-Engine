@@ -80,5 +80,6 @@ float4 LightPixelShader(PixelInputType input) : SV_TARGET
 	// Add the specular component last to the output color.
 	color = saturate(color + specular);
 
+	return float4(input.normal, 1.0);
     return color;
 }
