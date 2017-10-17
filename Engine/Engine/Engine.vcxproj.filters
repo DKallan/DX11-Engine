@@ -105,21 +105,19 @@
     <Image Include="data\stone01.tga">
       <Filter>Resource Files\Texture Files</Filter>
     </Image>
+    <Image Include="resources\sphere.tga">
+      <Filter>Resource Files\Texture Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\simple_tree.txt">
       <Filter>Resource Files\Model Files</Filter>
     </Text>
-    <Text Include="cube.txt">
-      <Filter>Resource Files\Model Files</Filter>
-    </Text>
     <Text Include="resources\sphere.txt">
       <Filter>Resource Files\Model Files</Filter>
     </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resources\sphere.iff">
-      <Filter>Resource Files\Texture Files</Filter>
-    </None>
+    <Text Include="resources\cube.txt">
+      <Filter>Resource Files\Model Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
