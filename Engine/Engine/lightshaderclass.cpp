@@ -181,14 +181,14 @@ bool LightShaderClass::InitializeShader(ID3D11Device* device, HWND hwnd, WCHAR* 
 		return false;
 	}
 
-	// Release the vertex shaer buffer and pixel shader buffer since they are no longer needed.
+	// Release the vertex shader buffer and pixel shader buffer since they are no longer needed.
 	vertexShaderBuffer->Release();
 	vertexShaderBuffer = 0;
 
 	pixelShaderBuffer->Release();
 	pixelShaderBuffer = 0;
 
-	// Create the texture sampler state desctiption.
+	// Create a texture sampler state desctiption.
 	samplerDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;
 	samplerDesc.AddressU = D3D11_TEXTURE_ADDRESS_WRAP;
 	samplerDesc.AddressV = D3D11_TEXTURE_ADDRESS_WRAP;
@@ -314,6 +314,7 @@ void LightShaderClass::ShutdownShader()
 	return;
 }
 
+
 void LightShaderClass::OutputShaderErrorMessage(ID3D10Blob* errorMessage, HWND hwnd, WCHAR* shaderFilename)
 {
 	char* compileErrors;
@@ -405,7 +406,7 @@ bool LightShaderClass::SetShaderParameters(ID3D11DeviceContext* deviceContext, X
 	dataPtr3->cameraPosition = cameraPosition;
 	dataPtr3->padding = 0.0f;
 
-	// Unlock the camera constant bfufer.
+	// Unlock the camera constant buffer.
 	deviceContext->Unmap(m_cameraBuffer, 0);
 
 	// Set the position of the camera constant buffer in the vertex shader.
@@ -427,7 +428,7 @@ bool LightShaderClass::SetShaderParameters(ID3D11DeviceContext* deviceContext, X
 	// Get a pointer to the data in the light constant buffer.
 	dataPtr2 = (LightBufferType*)mappedResource.pData;
 	
-	// Copy the lighting variables into the lightconstant buffer.
+	// Copy the lighting variables into the light constant buffer.
 	dataPtr2->ambientColor = ambientColor;
 	dataPtr2->diffuseColor = diffuseColor;
 	dataPtr2->lightDirection = lightDirection;
