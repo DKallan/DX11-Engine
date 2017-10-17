@@ -196,13 +196,11 @@
   <ItemGroup>
     <Image Include="data\stone01.tga" />
     <Image Include="resources\sphere.tga" />
-    <Image Include="resources\triforce.tga" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\cube.txt" />
     <Text Include="resources\simple_tree.txt" />
     <Text Include="resources\sphere.txt" />
-    <Text Include="resources\triforce.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
