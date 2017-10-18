@@ -40,7 +40,7 @@ float4 LightPixelShader(PixelInputType input) : SV_TARGET
 	float3 lightDir;
 	float lightIntensity;
 	float4 color;
-	float reflection;
+	float3 reflection;
 	float4 specular;
 
 
