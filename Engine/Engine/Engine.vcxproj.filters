@@ -114,6 +114,9 @@
     <Image Include="resources\sphere.tga">
       <Filter>Resource Files\Texture Files</Filter>
     </Image>
+    <Image Include="resources\stone02.tga">
+      <Filter>Resource Files\Texture Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\simple_tree.txt">

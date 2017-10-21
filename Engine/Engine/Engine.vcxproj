@@ -198,6 +198,7 @@
   <ItemGroup>
     <Image Include="data\stone01.tga" />
     <Image Include="resources\sphere.tga" />
+    <Image Include="resources\stone02.tga" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\cube.txt" />

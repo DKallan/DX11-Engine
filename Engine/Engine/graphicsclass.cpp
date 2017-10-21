@@ -64,7 +64,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 	}
 
 	// Initialize the model object.
-	result = m_Model->Initialize(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext(), "../Engine/resources/cube.txt", "../Engine/resources/sphere.tga");
+	result = m_Model->Initialize(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext(), "../Engine/resources/sphere.txt", "../Engine/resources/sphere.tga");
 	if (!result)
 	{
 		MessageBox(hwnd, L"Could not initialize the model object.", L"Error", MB_OK);
@@ -79,7 +79,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 	}
 
 	// Initialize the bitmap object.
-	result = m_Bitmap->Initialize(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext(), screenWidth, screenHeight, "../Engine/resources/stone01.tga", 256, 256);
+	result = m_Bitmap->Initialize(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext(), screenWidth, screenHeight, "../Engine/resources/stone02.tga", 512, 512);
 	if (!result)
 	{
 		MessageBox(hwnd, L"Could not initialize the bitmap object.", L"Error", MB_OK);
@@ -239,7 +239,7 @@ bool GraphicsClass::Render(float rotation)
 	m_Direct3D->TurnZbufferOff();
 
 	// Put the bitmap vertex and index buffers on graphics pipeline to prepare them for drawing.
-	result = m_Bitmap->Render(m_Direct3D->GetDeviceContext(), 100, 100);
+	result = m_Bitmap->Render(m_Direct3D->GetDeviceContext(), 150, 540);
 	if (!result)
 	{
 		return false;
