@@ -13,11 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Resource Files\Texture Files">
-      <UniqueIdentifier>{02a757b4-b208-47c3-ac65-1578aba28fa4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files\Model Files">
-      <UniqueIdentifier>{1d973125-ec69-4019-a542-4727403c63c0}</UniqueIdentifier>
+      <UniqueIdentifier>{613a612a-3626-413a-a7ae-18b9eef0f44a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Texture Files">
+      <UniqueIdentifier>{406dbd38-ef6b-4add-a3e7-5cc5e623de3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Font Files">
+      <UniqueIdentifier>{a7bd97e3-c6f4-4b84-ac17-297c02b6db5d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -102,21 +105,30 @@
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="data\stone01.tga">
+    <Image Include="resources\font\font.dds">
+      <Filter>Resource Files\Font Files</Filter>
+    </Image>
+    <Image Include="resources\textures\sphere.tga">
       <Filter>Resource Files\Texture Files</Filter>
     </Image>
-    <Image Include="resources\sphere.tga">
+    <Image Include="resources\textures\stone01.tga">
+      <Filter>Resource Files\Texture Files</Filter>
+    </Image>
+    <Image Include="resources\textures\triforce.tga">
       <Filter>Resource Files\Texture Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="resources\simple_tree.txt">
+    <Text Include="resources\font\fontdata.txt">
+      <Filter>Resource Files\Font Files</Filter>
+    </Text>
+    <Text Include="resources\models\cube.txt">
       <Filter>Resource Files\Model Files</Filter>
     </Text>
-    <Text Include="resources\sphere.txt">
+    <Text Include="resources\models\simple_tree.txt">
       <Filter>Resource Files\Model Files</Filter>
     </Text>
-    <Text Include="resources\cube.txt">
+    <Text Include="resources\models\sphere.txt">
       <Filter>Resource Files\Model Files</Filter>
     </Text>
   </ItemGroup>

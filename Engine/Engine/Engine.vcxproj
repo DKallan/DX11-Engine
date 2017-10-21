@@ -194,13 +194,16 @@
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="data\stone01.tga" />
-    <Image Include="resources\sphere.tga" />
+    <Image Include="resources\font\font.dds" />
+    <Image Include="resources\textures\sphere.tga" />
+    <Image Include="resources\textures\stone01.tga" />
+    <Image Include="resources\textures\triforce.tga" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="resources\cube.txt" />
-    <Text Include="resources\simple_tree.txt" />
-    <Text Include="resources\sphere.txt" />
+    <Text Include="resources\font\fontdata.txt" />
+    <Text Include="resources\models\cube.txt" />
+    <Text Include="resources\models\simple_tree.txt" />
+    <Text Include="resources\models\sphere.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
