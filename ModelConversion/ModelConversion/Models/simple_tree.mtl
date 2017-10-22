@@ -1,0 +1,24 @@
+# Blender MTL File: 'Simple_Tree.blend'
+# Material Count: 2
+
+newmtl Bark
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\Danilo\source\repos\DX11-Engine\Engine\Engine\resources\textures\simple_tree.tga
+
+newmtl Leaves
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\Danilo\source\repos\DX11-Engine\Engine\Engine\resources\textures\simple_tree.tga

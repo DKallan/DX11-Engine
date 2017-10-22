@@ -197,14 +197,16 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\font\font.dds" />
+    <Image Include="resources\textures\simple_tree_snow.tga" />
     <Image Include="resources\textures\sphere.tga" />
     <Image Include="resources\textures\stone01.tga" />
-    <Image Include="resources\textures\triforce.tga" />
+    <Image Include="resources\textures\stone02.tga" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\font\fontdata.txt" />
     <Text Include="resources\models\cube.txt" />
     <Text Include="resources\models\simple_tree.txt" />
+    <Text Include="resources\models\simple_tree_snow.txt" />
     <Text Include="resources\models\sphere.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

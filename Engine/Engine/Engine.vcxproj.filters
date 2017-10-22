@@ -120,10 +120,10 @@
     <Image Include="resources\textures\stone01.tga">
       <Filter>Resource Files\Texture Files</Filter>
     </Image>
-    <Image Include="resources\textures\triforce.tga">
+    <Image Include="resources\textures\stone02.tga">
       <Filter>Resource Files\Texture Files</Filter>
     </Image>
-    <Image Include="resources\stone02.tga">
+    <Image Include="resources\textures\simple_tree_snow.tga">
       <Filter>Resource Files\Texture Files</Filter>
     </Image>
   </ItemGroup>
@@ -138,6 +138,9 @@
       <Filter>Resource Files\Model Files</Filter>
     </Text>
     <Text Include="resources\models\sphere.txt">
+      <Filter>Resource Files\Model Files</Filter>
+    </Text>
+    <Text Include="resources\models\simple_tree_snow.txt">
       <Filter>Resource Files\Model Files</Filter>
     </Text>
   </ItemGroup>
