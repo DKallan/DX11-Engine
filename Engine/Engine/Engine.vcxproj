@@ -199,7 +199,6 @@
     <Image Include="resources\font\font.dds" />
     <Image Include="resources\textures\sphere.tga" />
     <Image Include="resources\textures\stone01.tga" />
-    <Image Include="resources\textures\triforce.tga" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\font\fontdata.txt" />
