@@ -22,6 +22,9 @@
     <Filter Include="Resource Files\Font Files">
       <UniqueIdentifier>{a7bd97e3-c6f4-4b84-ac17-297c02b6db5d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shader Files">
+      <UniqueIdentifier>{f517ec2a-86b1-48bf-8d3c-a467b5cf7edc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="modelclass.h">
@@ -55,6 +58,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="bitmapclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fontclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -95,19 +101,28 @@
     <ClCompile Include="bitmapclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fontclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="texture_ps.hlsl">
-      <Filter>Source Files</Filter>
-    </FxCompile>
-    <FxCompile Include="texture_vs.hlsl">
-      <Filter>Source Files</Filter>
-    </FxCompile>
     <FxCompile Include="light_ps.hlsl">
-      <Filter>Source Files</Filter>
+      <Filter>Shader Files</Filter>
     </FxCompile>
     <FxCompile Include="light_vs.hlsl">
-      <Filter>Source Files</Filter>
+      <Filter>Shader Files</Filter>
+    </FxCompile>
+    <FxCompile Include="texture_ps.hlsl">
+      <Filter>Shader Files</Filter>
+    </FxCompile>
+    <FxCompile Include="texture_vs.hlsl">
+      <Filter>Shader Files</Filter>
+    </FxCompile>
+    <FxCompile Include="font_vs.hlsl">
+      <Filter>Shader Files</Filter>
+    </FxCompile>
+    <FxCompile Include="font_ps.hlsl">
+      <Filter>Shader Files</Filter>
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
