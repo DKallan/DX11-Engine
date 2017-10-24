@@ -115,6 +115,7 @@
     <ClInclude Include="cameraclass.h" />
     <ClInclude Include="d3dclass.h" />
     <ClInclude Include="fontclass.h" />
+    <ClInclude Include="fontshaderclass.h" />
     <ClInclude Include="graphicsclass.h" />
     <ClInclude Include="inputclass.h" />
     <ClInclude Include="lightclass.h" />
@@ -129,6 +130,7 @@
     <ClCompile Include="cameraclass.cpp" />
     <ClCompile Include="d3dclass.cpp" />
     <ClCompile Include="fontclass.cpp" />
+    <ClCompile Include="fontshaderclass.cpp" />
     <ClCompile Include="graphicsclass.cpp" />
     <ClCompile Include="inputclass.cpp" />
     <ClCompile Include="lightclass.cpp" />

@@ -63,6 +63,9 @@
     <ClInclude Include="fontclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="fontshaderclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="inputclass.cpp">
@@ -102,6 +105,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="fontclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fontshaderclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
