@@ -166,6 +166,9 @@ void FontClass::BuildVertexArray(void* vertices, char* sentence, float drawX, fl
 	// Coerce the input vertices into a VertexType structure.
 	vertexPtr = (VertexType*)vertices;
 
+	// Get the number of letters in the sentence.
+	numLetters = (int)strlen(sentence);
+
 	// Initialize the index to the vertex array.
 	index = 0;
 

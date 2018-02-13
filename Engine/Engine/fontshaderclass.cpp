@@ -313,3 +313,80 @@ void FontShaderClass::OutputShaderErrorMessage(ID3D10Blob* errorMessage, HWND hw
 }
 
 
+bool FontShaderClass::SetShaderParameters(ID3D11DeviceContext* deviceContext, XMMATRIX worldMatrix, XMMATRIX viewMatrix,
+	XMMATRIX projectionMatrix, ID3D11ShaderResourceView* texture, XMFLOAT4 pixelColor)
+{
+	HRESULT result;
+	D3D11_MAPPED_SUBRESOURCE mappedResource;
+	ConstantBufferType* dataPtr;
+	unsigned int bufferNumber;
+	PixelBufferType* dataPtr2;
+
+	
+	// Lock the constant buffer so it can be written to.
+	result = deviceContext->Map(m_constantBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
+	if (FAILED(result))
+	{
+		return false;
+	}
+
+	// Get a pointer to the data in the constant buffer.
+	dataPtr = (ConstantBufferType*)mappedResource.pData;
+
+	// Transpose the matrices to prepare them for the shader.
+	worldMatrix = XMMatrixTranspose(worldMatrix);
+	viewMatrix = XMMatrixTranspose(viewMatrix);
+	projectionMatrix = XMMatrixTranspose(projectionMatrix);
+
+	// Unlock the constant buffer.
+	deviceContext->Unmap(m_constantBuffer, 0);
+
+	// Set the constant buffer in the vertex shader with the updated values.
+	deviceContext->VSSetConstantBuffers(bufferNumber, 1, &m_constantBuffer);
+
+	// Set shader texture resource in the pixel shader.
+	deviceContext->PSSetShaderResources(0, 1, &texture);
+
+	// Lock the pixel constant buffer so it can be writte to.
+	result = deviceContext->Map(m_pixelBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
+	if (FAILED(result))
+	{
+		return false;
+	}
+
+	// Get a pointer to the data in the pixel constant buffer.
+	dataPtr2 = (PixelBufferType*)mappedResource.pData;
+
+	// Copy the pixel color into the pixel constant buffer.
+	dataPtr2->pixelColor = pixelColor;
+
+	// Unlock the pixel constant buffer.
+	deviceContext->Unmap(m_pixelBuffer, 0);
+
+	// Set the position of the pixel constant buffer in the pixel shader.
+	bufferNumber = 0;
+
+	// Now est the pixel constant buffer in the pixel shader with the updated value.
+	deviceContext->PSSetConstantBuffers(bufferNumber, 1, &m_pixelBuffer);
+
+	return true;
+}
+
+
+void FontShaderClass::RenderShader(ID3D11DeviceContext* deviceContext, int indexCount)
+{
+	// Set the vertex input layout.
+	deviceContext->IASetInputLayout(m_layout);
+
+	// Set the vertex and pixel shaders that will be used to render the triangles.
+	deviceContext->VSSetShader(m_vertexShader, NULL, 0);
+	deviceContext->PSSetShader(m_pixelShader, NULL, 0);
+
+	// Set the sampler state in the pixel shader.
+	deviceContext->PSSetSamplers(0, 1, &m_sampleState);
+
+	// Render the triangles.
+	deviceContext->DrawIndexed(indexCount, 0, 0);
+
+	return;
+}

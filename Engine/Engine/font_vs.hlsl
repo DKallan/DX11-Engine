@@ -23,6 +23,12 @@ struct VertexInputType
 	float2 tex : TEXCOORD0;
 };
 
+struct PixelInputType
+{
+	float4 position : SV_POSITION;
+	float2 tex : TEXCOORD0;
+};
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // Vertex Shader
