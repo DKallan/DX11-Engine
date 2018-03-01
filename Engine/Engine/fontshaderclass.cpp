@@ -341,6 +341,9 @@ bool FontShaderClass::SetShaderParameters(ID3D11DeviceContext* deviceContext, XM
 	// Unlock the constant buffer.
 	deviceContext->Unmap(m_constantBuffer, 0);
 
+	// Set the position of the constant buffer in the vertex shader.
+	bufferNumber = 0;
+
 	// Set the constant buffer in the vertex shader with the updated values.
 	deviceContext->VSSetConstantBuffers(bufferNumber, 1, &m_constantBuffer);
 

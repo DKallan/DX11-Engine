@@ -13,6 +13,7 @@ GraphicsClass::GraphicsClass()
 	m_TextureShader = 0;
 	m_LightShader = 0;
 	m_Light = 0;
+	m_Text = 0;
 }
 
 
@@ -29,6 +30,7 @@ GraphicsClass::~GraphicsClass()
 bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 {
 	bool result;
+	XMMATRIX baseViewMatrix;
 
 
 	// Create the Direct3D object.
@@ -54,7 +56,24 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 	}
 
 	// Set the initial position of the camera.
-	m_Camera->SetPosition(0.0f, 1.0f, -3.5f);
+	m_Camera->SetPosition(0.0f, 0.0f, -1.0f);
+	m_Camera->Render();
+	m_Camera->GetViewMatrix(baseViewMatrix);
+
+	// Create the text object.
+	m_Text = new TextClass;
+	if (!m_Text)
+	{
+		return false;
+	}
+
+	// Initialize the text object.
+	result = m_Text->Initialize(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext(), hwnd, screenWidth, screenHeight, baseViewMatrix);
+	if (!result)
+	{
+		MessageBox(hwnd, L"Could not initialize the text object.", L"Error", MB_OK);
+		return false;
+	}
 
 	// Create the model object.
 	m_Model = new ModelClass;
@@ -136,6 +155,14 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 
 void GraphicsClass::Shutdown()
 {
+	// Release the text object.
+	if (m_Text)
+	{
+		m_Text->Shutdown();
+		delete m_Text;
+		m_Text = 0;
+	}
+
 	// Release the bitmap object.
 	if (m_Bitmap)
 	{
@@ -238,6 +265,16 @@ bool GraphicsClass::Render(float rotation)
 	// Turn off the Z buffer to begin all 2d rendering.
 	m_Direct3D->TurnZbufferOff();
 
+	// Turn on the alpha blending before rendering the text.
+	m_Direct3D->TurnOnAlphaBlending();
+	
+	// Render the text strings.
+	result = m_Text->Render(m_Direct3D->GetDeviceContext(), worldMatrix, orthoMatrix);
+	if (!result)
+	{
+		return false;
+	}
+
 	// Put the bitmap vertex and index buffers on graphics pipeline to prepare them for drawing.
 	result = m_Bitmap->Render(m_Direct3D->GetDeviceContext(), 150, 540);
 	if (!result)
@@ -251,6 +288,9 @@ bool GraphicsClass::Render(float rotation)
 	{
 		return false;
 	}
+
+	// Turn off alpha blending after rendering the text.
+	m_Direct3D->TurnOffAlphaBlending();
 
 	// Turn the Z buffer back on now that all 2D rendering ahs completed.
 	m_Direct3D->TurnZbufferOn();
