@@ -30,11 +30,11 @@ bool FontClass::Initialize(ID3D11Device* device, ID3D11DeviceContext* deviceCont
 	result = LoadFontData(fontFilename);
 	if (!result)
 	{
-
+		return false;
 	}
-
+	
 	// Load the texture data that has the font characters on it.
-	result = LoadTexture(device, deviceContext, textureFilename);
+ 	result = LoadTexture(device, deviceContext, textureFilename);
 	if (!result)
 	{
 		return false;
